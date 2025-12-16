@@ -284,6 +284,7 @@ class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SearchScreenState createState() => _SearchScreenState();
 }
 
@@ -500,7 +501,7 @@ class CategoryDetailScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'This app provides basic first-aid guidance only. Always call emergency services (999) for serious injuries or emergencies.',
+                          'This app provides basic first-aid guidance only. Always call our emergency service (900) for serious injuries or emergencies.',
                           style: TextStyle(color: Colors.orange.shade700),
                         ),
                       ],
@@ -575,6 +576,19 @@ class FirstAidData {
       ],
     ),
     FirstAidCategory(
+      name: 'Snake Bites',
+      description: 'Emergency response for snake bites',
+      icon: Icons.pets,
+      keywords: ['snake', 'bite', 'venom', 'poison', 'animal'],
+      instructions: [
+        'Stay calm and reassure the person',
+        'Keep the person still and lying down',
+        'Remove any jewelry near the bite area',
+        'Do not apply ice or tourniquets',
+        'Call emergency services immediately if bitten by a venomous snake',
+      ],
+    ),
+    FirstAidCategory(
       name: 'Choking',
       description: 'Clear airway obstruction',
       icon: Icons.air,
@@ -642,6 +656,22 @@ class FirstAidData {
         'Push hard and fast at least 2 inches deep at 100-120 compressions per minute',
         'After 30 compressions, give 2 rescue breaths',
         'Continue cycles of 30 compressions and 2 breaths until help arrives',
+      ],
+    ),
+    FirstAidCategory(
+      name: 'Depression Crisis',
+      description: 'Emergency response for depression crisis',
+      icon: Icons.psychology,
+      keywords: ['depression', 'crisis', 'mental health', 'emotional', 'support'],
+      instructions: [
+        'Stay calm and be present with the person',
+        'Listen without judging, interrupting, or correcting',
+        'Reassure them that they are not alone',
+        'Encourage them to talk about their feelings',
+        'Avoid giving quick solutions or comparisons',
+        'Encourage contacting a trusted person (family, friend, pastor)',
+        'If they are in immediate danger, call emergency services',
+        'Stay with them until help arrives if possible',
       ],
     ),
   ];
